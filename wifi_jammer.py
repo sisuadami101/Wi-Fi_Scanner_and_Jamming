@@ -3,6 +3,8 @@
 
 import os
 import time
+import shutil
+import socket  # Added socket library for network-related operations
 from subprocess import Popen, PIPE
 
 # Console colors
@@ -98,8 +100,21 @@ def start_jamming(target, duration):
         print(f"\n{R}[!]{W} Jamming stopped manually. Exiting.")
         exit(0)
 
+def network_details():
+    """Fetch network-related details using socket."""
+    try:
+        hostname = socket.gethostname()
+        local_ip = socket.gethostbyname(hostname)
+        print(f"{G}[+]{W} Hostname: {B}{hostname}{W}")
+        print(f"{G}[+]{W} Local IP: {B}{local_ip}{W}")
+    except Exception as e:
+        print(f"{R}[-]{W} Error fetching network details: {e}")
+
 def main():
     print(f"{G}[+]{W} Starting Wi-Fi scanner...")
+
+    # Fetch and display network details
+    network_details()
 
     # Scan networks
     networks = scan_wifi()
