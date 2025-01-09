@@ -14,14 +14,17 @@ R = '\033[31m'  # red
 B = '\033[34m'  # blue
 T = '\033[93m'  # tan
 
+
 def check_dependencies():
     """Check if required tools are installed."""
     required_tools = ["termux-wifi-scaninfo"]
     for tool in required_tools:
-        if not shutil.which(tool):
+        if os.system(f"which {tool}") != 0:  # Replace shutil.which() with os.system
             print(f"{R}[-]{W} Missing tool: {tool}")
             print(f"{B}[+]{W} Please install it using `pkg install termux-tools`.")
             exit(1)
+
+
 
 def scan_wifi():
     """Scan available Wi-Fi networks."""
