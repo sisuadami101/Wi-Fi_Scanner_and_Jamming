@@ -70,7 +70,7 @@ git clone https://github.com/sisuadami101/Wi-Fi_Scanner_and_Jamming.git
 python3 wifi_jammer.py
 ```
 
-## View Network Details:##
+## View Network Details: ##
 The script will display your device's hostname and local ***IP*** address.
 
 ## Scan Wi-Fi Networks: ##
