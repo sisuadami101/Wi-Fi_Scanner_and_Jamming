@@ -6,7 +6,7 @@ etwork, and simulates a jamming process for a user-defined duration. The script 
 ---
 
 ## Features
-
+```yaml
 1. **Wi-Fi Network Scanning**:  
    The script scans all available Wi-Fi networks in range and displays detailed information, including:
    - SSID (Wi-Fi name)
@@ -28,7 +28,7 @@ etwork, and simulates a jamming process for a user-defined duration. The script 
 
 6. **Network Details**:  
    Displays the device's hostname and local IP address for debugging and informational purposes.
-
+```
 ---
 
 ## Prerequisites
@@ -44,11 +44,8 @@ Before running the script, ensure you have the following installed on Termux:
  pkg install git
 ```
 
-
-
 **Termux Tools:**
 Install the necessary Termux tools:
-
 ```bash
 pkg install termux-tools
 ```
@@ -59,7 +56,6 @@ pkg install termux-tools
 ```bash
 pkg install termux-api
 ```
-
 
 ## Installation ##
 **Clone the Repository:**
@@ -115,12 +111,13 @@ The script simulates the jamming process and displays a message when completed.
 ## Known Issues ##
 **termux-wifi-scaninfo Not Found:**
 If you encounter the **Error**:
-```bash
+```yaml
 [-] Missing tool: termux-wifi-scaninfo
-[+] Please install it using `pkg install termux-tools.
+[+] Please install it using
 ```
-
-
+```bash
+pkg install termux-tools.
+```
 
 **Ensure termux-tools is installed:**
 ```bash
